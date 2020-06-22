@@ -17,6 +17,7 @@ export class AppComponent {
     Object.assign({qanak:1},this.products[2]),
   ]
   public sum:number=this.cart.reduce((total, num)=> total + num.qanak*num.price,0);
+  public n:string=""
   addCart(a){
     if (a.count>0) {
       a.count--

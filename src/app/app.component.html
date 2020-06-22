@@ -1,11 +1,11 @@
 <h1 class="text-center text-success">Online Shop</h1>
-<!-- {{name}} -->
+{{n}}
 <div class="row">
   <div class="col-6">
     <app-products [prod]="products" (add)="addCart($event)"></app-products>
   </div>
   <div class="col-6">
-    <app-cart [cart]="cart" [sum]="sum" (del) = "deleteCart($event)" (pl) = "plus($event)" (min) = "minus($event)"  ></app-cart>
-    <!-- (name)="name=$event"  -->
+    <app-cart [cart]="cart" [sum]="sum" (del) = "deleteCart($event)" (name)="n = $event"  (pl) = "plus($event)" (min) = "minus($event)"  ></app-cart>
+    (name)="name=$event" 
   </div>
 </div>
