@@ -1,0 +1,9 @@
+<h1 class="text-center">products</h1>
+<div *ngFor="let p of prod" class="float-left p-3 m-3 card alert-warning">
+    <h2 class="text-info">{{p.name}}</h2>
+    <h5 class="text-danger">{{p.price}}</h5>
+    <p class="text-success">{{p.count}}</p>
+    <p class="text-info">{{p.discription}}</p>
+    <button class="btn btn-dark" (click)="add.emit(p)">Add Cart</button>
+
+</div>

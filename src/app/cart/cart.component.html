@@ -1,0 +1,26 @@
+<h1 class="text-center">Cart </h1>
+<h2 class="text-center">Sum of cart = {{sum}}</h2>
+<table class="table table-hover table-warning">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>qanak</th>
+        <th>price</th>
+        <th>discription</th>
+        <th>action</th>
+    </tr>
+    <tr *ngFor="let c of cart">
+        <td>{{c.id}} </td>
+        <td>{{c.name}} </td>
+        <td>{{c.qanak}} </td>
+        <td>{{c.price}} </td>
+        <td>{{c.discription}} </td>
+        <td>
+            <button class="btn btn-danger" (click)="delete(c)">Delete</button>
+            <button class="btn btn-success" (click)=(plus(c)) >+</button>
+            <button class="btn btn-info" (click)=(minus(c)) >-</button>
+            <button class="btn" (click)="ok(c.name)">ok</button>
+        </td>
+
+    </tr>
+</table>
